@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Magic.PhotoGallery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Magic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.Resources>
+            <Storyboard x:Name="inStoryboard">
+                <DoubleAnimation Storyboard.TargetName="ImageRotation"
+                         Storyboard.TargetProperty="Opacity" From="0.0"
+                         To="1.0" Duration="0:0:10" />
+            </Storyboard>
+            <Storyboard x:Name="outStoryBoard">
+                <DoubleAnimation Storyboard.TargetName="ImageRotation"
+                         Storyboard.TargetProperty="Opacity" From="1.0"
+                         To="0.0" Duration="0:0:10" />
+            </Storyboard>
+        </Grid.Resources>
+        <Image x:Name="ImageRotation"/>
+    </Grid>
+</Page>

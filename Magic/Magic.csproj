@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F070DCE4-A9F6-4F0D-89CA-1B501FD4A453}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magic</RootNamespace>
+    <AssemblyName>Magic</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Magic_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Conditions.cs" />
+    <Compile Include="FutureWeatherForecast.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MirrorSpeechRecognition.cs" />
+    <Compile Include="NavigatePage.cs" />
+    <Compile Include="PhotoGallery.xaml.cs">
+      <DependentUpon>PhotoGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoRotation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Weather.cs" />
+    <Compile Include="WeatherForecast.xaml.cs">
+      <DependentUpon>WeatherForecast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherIconClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Magic_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Background\goals.jpg" />
+    <Content Include="Assets\Background\voldermort.jpg" />
+    <Content Include="Assets\Engagement\0 %2810%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2811%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2812%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2813%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2814%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2815%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2816%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2817%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2818%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2819%29.jpg" />
+    <Content Include="Assets\Engagement\0 %282%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2820%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2821%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2822%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2823%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2824%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2825%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2826%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2827%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2828%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2829%29.jpg" />
+    <Content Include="Assets\Engagement\0 %283%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2830%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2831%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2832%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2833%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2834%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2835%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2836%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2837%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2838%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2839%29.jpg" />
+    <Content Include="Assets\Engagement\0 %284%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2840%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2841%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2842%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2843%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2844%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2845%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2846%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2847%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2848%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2849%29.jpg" />
+    <Content Include="Assets\Engagement\0 %285%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2850%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2851%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2852%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2853%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2854%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2855%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2856%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2857%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2858%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2859%29.jpg" />
+    <Content Include="Assets\Engagement\0 %286%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2860%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2861%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2862%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2863%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2864%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2865%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2866%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2867%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2868%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2869%29.jpg" />
+    <Content Include="Assets\Engagement\0 %287%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2870%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2871%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2872%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2873%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2874%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2875%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2876%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2877%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2878%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2879%29.jpg" />
+    <Content Include="Assets\Engagement\0 %288%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2880%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2881%29.jpg" />
+    <Content Include="Assets\Engagement\0 %2882%29.jpg" />
+    <Content Include="Assets\Engagement\0 %281%29.jpg" />
+    <Content Include="Assets\Engagement\0 %280%29.jpg" />
+    <Content Include="Assets\Engagement\0 %289%29.jpg" />
+    <Content Include="Assets\Icon\01d.png" />
+    <Content Include="Assets\Icon\01n.png" />
+    <Content Include="Assets\Icon\02d.png" />
+    <Content Include="Assets\Icon\02n.png" />
+    <Content Include="Assets\Icon\03d.png" />
+    <Content Include="Assets\Icon\03n.png" />
+    <Content Include="Assets\Icon\04d.png" />
+    <Content Include="Assets\Icon\04n.png" />
+    <Content Include="Assets\Icon\09d.png" />
+    <Content Include="Assets\Icon\09n.png" />
+    <Content Include="Assets\Icon\10d.png" />
+    <Content Include="Assets\Icon\10n.png" />
+    <Content Include="Assets\Icon\11d.png" />
+    <Content Include="Assets\Icon\11n.png" />
+    <Content Include="Assets\Icon\13d.png" />
+    <Content Include="Assets\Icon\13n.png" />
+    <Content Include="Assets\Icon\50d.png" />
+    <Content Include="Assets\Icon\50n.png" />
+    <Content Include="Assets\Icon\error.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhotoGallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WeatherForecast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
